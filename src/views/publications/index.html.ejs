@@ -1,0 +1,13 @@
+<h2>Publications</h2>
+<p>Cantidad de Publications: <%= publications.length %></p>
+<div>
+    <% publications.forEach(publication => { %>
+        <!--<p><%= publication.name %></p>-->
+        <p><a href="<%= publicationPath(publication) %>"><%= publication.name %></a></p>
+    <% }); %>
+
+    <form action="<%= signOutPath %>" method="post">
+        <input type="hidden" name="_method" value="delete" />
+        <input class="delete-button" type="submit" value="Sign Out" />
+    </form>
+</div>

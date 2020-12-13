@@ -1,0 +1,39 @@
+<div class="main">
+    <div class="alignment">
+        <div id="bandera">
+        </div>
+        <div id="recuadro">
+            <div class="box">
+                <% if (locals.errors) { %>
+                    <div class="errors">
+                        <% if (errors == "A") { %>
+                            <p> Incorrect Password or Email </p>
+                        <% } if (errors == "B") { %>
+                            <p> Missing Fields </p>    
+                        <% } if (errors == "C") { %>
+                            <p> This email does not exist </p>
+                            <% } %>
+                    </div>
+                <% } %>
+                <form action="<%= createSessionPath %>" method="post">
+                    <input type="hidden" name="_method" value="put" />
+                    <div class = "field-alignment">
+                        <p><label for="email">Email</label>
+                        <input class="insert-text" type="email" name="email"  /></p>
+                        <p><label for="password">Password</label>
+                        <input class="insert-text" type="password" name="password" /></p>
+                        <br>
+                        <div class="field" style="text-align:center"> 
+                            <input type="submit" name="sign-in" value="Sign In">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <br>
+            <div class="box">
+            </div>
+        </div>
+        <div class='filler'></div>
+    </div>
+</div>
+<div class="grey-backround"></div>

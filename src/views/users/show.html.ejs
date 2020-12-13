@@ -1,0 +1,8 @@
+<h1>Hola Bart</h1>
+
+<p><a href="<%= publicationsPath %>">See publications</a></p>
+
+<form action="<%= signOutPath %>" method="post">
+    <input type="hidden" name="_method" value="delete" />
+    <input class="delete-button" type="submit" value="Sign Out" />
+</form>

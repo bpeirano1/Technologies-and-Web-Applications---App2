@@ -1,0 +1,13 @@
+<h2><%= publication.name %></h2>
+<p> Ingredients: <%= publication.ingredients %></p>
+<p> Preparation time: <%= publication.time %></p>
+<p> Steps: <%= publication.steps %></p>
+<p>Description: <%= publication.description %></p>
+
+<h2>Comentarios</h2>
+<% comments.forEach(comment => { %>
+    <!--<p><%= publication.name %></p>-->
+    <p><a href="<%= commentPath(comment) %>"><%= comment.description %></a></p>
+<% }); %>
+
+<p><a href="<%= backPath%>">Back</a></p>
